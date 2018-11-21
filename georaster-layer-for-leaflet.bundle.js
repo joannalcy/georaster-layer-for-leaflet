@@ -8,7 +8,7 @@ var GeoRasterLayer = L.GridLayer.extend({
 
     initialize: function initialize(options) {
         try {
-            console.log("starting GeoRasterLayer.initialize with", options);
+            // console.log("starting GeoRasterLayer.initialize with", options);
 
             if (!options.keepBuffer) options.keepBuffer = 25;
 
@@ -38,11 +38,11 @@ var GeoRasterLayer = L.GridLayer.extend({
             this._xmax = georaster.xmax;
             this._ymax = georaster.ymax;
 
-            console.log("georaster.ymin:", georaster.ymin);
+            // console.log("georaster.ymin:", georaster.ymin);
             var southWest = L.latLng(georaster.ymin, georaster.xmin);
             var northEast = L.latLng(georaster.ymax, georaster.xmax);
             this._bounds = L.latLngBounds(southWest, northEast);
-            console.log("this._bounds:", this._bounds);
+            // console.log("this._bounds:", this._bounds);
             options.bounds = this._bounds;
             L.setOptions(this, options);
 
