@@ -222,7 +222,9 @@ var GeoRasterLayer = L.GridLayer.extend({
         d.style.color = name;
         document.body.appendChild(d);
         return window.getComputedStyle(d).color;
-    }
+    },
+
+    console.log: function() {}
 });
 
 if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
